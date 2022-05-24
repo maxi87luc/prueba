@@ -1,0 +1,145 @@
+.box {
+    height: 40px;
+    width: 80px;
+    border-radius: 6px;
+    margin: 50px auto;  
+}
+
+.box-uno {
+    background-color: aqua;
+}
+
+.box-dos {
+    background-color: blueviolet;
+
+    /* dos valores obligatorios
+    1- a que propiedad
+    2- cuanto tiempo dura
+    */
+    /*transition-property: all;
+    transition-duration: 2s;*/
+    transition: all 2s;
+}
+
+.box:hover {
+    transform: scale(4)
+}
+
+/* Hover = se activan las propiedades dentro de las llaves hover al pasar el cursor por encima */
+
+.container-circle div {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+}
+
+.container-circle:hover .circle1,
+.container-circle:hover .circle2,
+.container-circle:hover .circle3,
+.container-circle:hover .circle4,
+.container-circle:hover .circle5 {
+    transform: translateX(200px);
+}
+
+.circle1 {
+    background-color: coral;
+
+    transition: all 1.5s linear;
+}
+.circle2 {
+    background-color: darkcyan;
+    transition: all 1.5s ease-in;
+}
+.circle3 {
+    background-color: darkolivegreen;
+    transition: all 1.5s ease;
+}
+.circle4 {
+    background-color: darkseagreen;
+    transition: all 1.5s ease-in-out;
+}
+.circle5 {
+    background-color: dodgerblue;
+    transition: all 1.5s ease-out;
+}
+
+.square1, .square2 {
+    border-radius: 4px;
+    height: 150px;
+    width: 150px;
+    margin: 100px;
+    position: absolute;
+}
+
+.square1 {
+    background-color: hotpink;
+
+}
+
+.square2 {
+    background-color: darksalmon;
+    transition: all 0.8s;
+}
+
+.square2:hover {
+    transform: translate(20px, 20px);
+    background-color: transparent;
+}
+
+.combinado {
+    background-color: blueviolet;
+    height: 75px;
+    width: 75px;
+    margin: 50px auto;
+
+    transition: all 2s;
+}
+
+.combinado:hover {
+    transform: scale(2) translateX(120px) rotate(90deg);
+
+    /* Prefijos */
+    -webkit-transform: scale(2) translateX(120px) rotate(90deg);
+    -o-transform: scale(2) translateX(120px) rotate(90deg);
+    -moz-transform: scale(2) translateX(120px) rotate(90deg);
+
+}
+.animaciones {
+    width: 120px;
+    height: 120px;
+    margin: 50px auto;
+    background-color: yellow;
+}
+.animaciones:hover {
+    /* Nombre y la duracion */
+    animation: changeColor 4s infinite;
+}
+
+/* Keyframes */
+
+@keyframes changeColor {
+    0% {
+        background-color: aqua;
+        
+
+    }
+    15% {
+        background-color: black;
+        border-radius: 5px;
+
+    }
+    45% {
+        background-color: brown;
+        border: 8px solid black
+
+    }
+    50% {
+        background-color: blue;
+
+    }
+    100% {
+        background-color: transparent;
+
+    }
+}
